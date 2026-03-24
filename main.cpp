@@ -21,7 +21,7 @@ int main(){
     hello();
     cin >> answer;
     if (answer == 1){
-        number == 1;
+        number = 1;
         databaseCheck(number);
         //На доработку
     }
