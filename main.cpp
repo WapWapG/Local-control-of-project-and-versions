@@ -8,9 +8,7 @@ void hello(){
 }
 
 int databaseCheck(int number){
-    if (number == 1){
-        // реализация, взятие переменных из database.cpp в зависимости от числа
-    }
+    //Старый кусок кода удален,  буду делать через <fstream>
 }
 
 int main(){
