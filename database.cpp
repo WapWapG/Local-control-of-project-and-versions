@@ -17,6 +17,12 @@ int databaseCheck(){
     return 0;
 }
 
-//int databaseWrite(){
+//Функция для записи в файл
+int databaseWrite(){
+    ofstream out("Projects.txt", std::ios::app);
+    if (out.is.open()){
+        out << "New hello world!" << endl;
+    }
+    out.close();
     //Реализация
-//}
+}
