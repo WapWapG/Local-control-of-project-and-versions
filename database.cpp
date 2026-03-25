@@ -3,6 +3,9 @@
 #include <string>
 using namespace std;
 
+//Обьявление переменных
+string name;
+string dir;
 int lines = 0;
 
 // Функция для считывания txt файла
@@ -22,9 +25,13 @@ int databaseCheck(){
 //Функция для записи в файл
 //Не работает
 void databaseWrite(){
+    cout << "Введите название проекта: ";
+    cin >> name;
+    cout << "Введите путь до проекта: ";
+    cin >> dir;
     ofstream out("Projects.txt", std::ios::app);
     if (out.is_open()){
-        out << lines++ << " New hello world!" << endl;
+        out << lines++ << " | " << name << " | "<< dir << endl;
     }
     out.close();
     //Реализация

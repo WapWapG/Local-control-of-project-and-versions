@@ -23,6 +23,9 @@ int main(){
     }
     if (answer == 2){
         databaseWrite();
+        main();
         //На доработку
     }
 }
+
+//Version A.1.0
