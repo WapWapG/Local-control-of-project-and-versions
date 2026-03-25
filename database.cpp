@@ -23,16 +23,16 @@ int databaseCheck(){
 }
 
 //Функция для записи в файл
-//Не работает
 void databaseWrite(){
+    //Получение данных
     cout << "Введите название проекта: ";
     cin >> name;
     cout << "Введите путь до проекта: ";
     cin >> dir;
+    //Запись проекта
     ofstream out("Projects.txt", std::ios::app);
     if (out.is_open()){
-        out << lines++ << " | " << name << " | "<< dir << endl;
+        out << lines + 1 << " | " << name << " | "<< dir << endl;
     }
     out.close();
-    //Реализация
 }
