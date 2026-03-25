@@ -21,7 +21,7 @@ int main(){
         databaseCheck();
         //На доработку
     }
-    if (answer == 1){
+    if (answer == 2){
         databaseWrite();
         //На доработку
     }
