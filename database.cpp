@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 
+int lines = 0;
 
 // Функция для считывания txt файла
 int databaseCheck(){
@@ -10,6 +11,7 @@ int databaseCheck(){
     std::ifstream in("Projects.txt");
     if (in.is_open()){
         while (std::getline(in, line)){
+            lines++;
             cout << line << endl;
         }
     }
@@ -18,10 +20,11 @@ int databaseCheck(){
 }
 
 //Функция для записи в файл
-int databaseWrite(){
+//Не работает
+void databaseWrite(){
     ofstream out("Projects.txt", std::ios::app);
-    if (out.is.open()){
-        out << "New hello world!" << endl;
+    if (out.is_open()){
+        out << lines++ << " New hello world!" << endl;
     }
     out.close();
     //Реализация

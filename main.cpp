@@ -8,18 +8,21 @@ using namespace std;
 void hello(){
     cout <<  "Привет! что будешь делать?" <<"\n";
     cout <<  "1. Мои проекты(В реализции)" << "\n";
+    cout <<  "2. Добавить проект(В реализции)" << "\n";
 }
 
 int main(){
     //Инициализация переменных
     //и вывод списка действий
     int answer;
-    int number;
     hello();
     cin >> answer;
     if (answer == 1){
-        number = 1;
         databaseCheck();
+        //На доработку
+    }
+    if (answer == 1){
+        databaseWrite();
         //На доработку
     }
 }
