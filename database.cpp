@@ -42,6 +42,7 @@ void databaseWrite(){
         out << howmany << ". Название: " << name << " | Путь: "<< dir << endl;
     }
     out.close();
+    cout << "Запись прошла успешна!" << endl;
 }
 //Функция очистки txt файла
 void databaseClear(){
