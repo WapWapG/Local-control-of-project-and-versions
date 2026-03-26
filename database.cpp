@@ -55,3 +55,4 @@ void databaseClear(){
     out.close();
     cout << "Список очищен" << std::endl;
 }
+

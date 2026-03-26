@@ -2,14 +2,22 @@
 #include <fstream>
 #include <string>
 #include "database.cpp"
+#include "filesystemwork.cpp"
 using namespace std;
-
+int AnswerFor1;
 //Функция приветсвия пользователя, вывод первого сообщения.
 void hello(){
     cout <<  "Привет! что будешь делать?" <<"\n";
     cout <<  "1. Мои проекты(В реализции)" << "\n";
     cout <<  "2. Добавить проект" << "\n";
     cout <<  "3. Очистить список проектов" << "\n";
+}
+//Сверка ответов
+void checkAnswer(){
+    switch (AnswerFor1){
+        case 1:
+            CopyFolder();
+    }
 }
 
 int main(){
@@ -24,6 +32,12 @@ int main(){
         case 1:
             //Вызов проверки Projects.txt
             databaseCheck();
+            //Вызов сохранения
+            //cout << "Сделать сохранение проекта?" << "\n";
+            //cout << "1. Да" << "\n";
+            //cout << "2. Выход" << "\n";
+            //cin >> AnswerFor1;
+            //checkAnswer();
             break;
 
         case 2:
