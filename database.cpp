@@ -6,15 +6,13 @@ using namespace std;
 //Обьявление переменных
 string name;
 string dir;
-int lines = 0;
+string line;
 
 // Функция для считывания txt файла
 int databaseCheck(){
-    string line;
     std::ifstream in("Projects.txt");
     if (in.is_open()){
         while (std::getline(in, line)){
-            lines++;
             cout << line << endl;
         }
     }
@@ -29,10 +27,19 @@ void databaseWrite(){
     cin >> name;
     cout << "Введите путь до проекта: ";
     cin >> dir;
+    //Считывание кол-ва проектов
+    int howmany = 0;
+    ifstream in("Projects.txt");
+    if (in.is_open()){
+        while (getline(in, line)){
+            howmany++;
+        }
+    }
+    in.close();
     //Запись проекта
     ofstream out("Projects.txt", std::ios::app);
     if (out.is_open()){
-        out << lines + 1 << " | " << name << " | "<< dir << endl;
+        out << howmany + 1 << " | " << name << " | "<< dir << endl;
     }
     out.close();
 }
