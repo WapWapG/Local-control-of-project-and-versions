@@ -13,12 +13,12 @@ void hello(){
     cout <<  "3. Очистить список проектов" << "\n";
 }
 //Сверка ответов
-void checkAnswer(){
-    switch (AnswerFor1){
-        case 1:
-            CopyFolder();
-    }
-}
+//void checkAnswer(){
+//    switch (AnswerFor1){
+//        case 1:
+//            CopyFolder();
+//    }
+//}
 
 int main(){
     while(true){
