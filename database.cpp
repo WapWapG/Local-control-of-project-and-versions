@@ -39,7 +39,18 @@ void databaseWrite(){
     //Запись проекта
     ofstream out("Projects.txt", std::ios::app);
     if (out.is_open()){
-        out << howmany + 1 << " | " << name << " | "<< dir << endl;
+        out << howmany << ". Название: " << name << " | Путь: "<< dir << endl;
     }
     out.close();
+}
+//Функция очистки txt файла
+void databaseClear(){
+    ofstream out;
+    //Открываю файл
+    out.open("Projects.txt");
+    //Запись пустой строки поверх прошлых
+    if (out.is_open()){
+        out << "" << endl;}
+    out.close();
+    cout << "Список очищен" << std::endl;
 }

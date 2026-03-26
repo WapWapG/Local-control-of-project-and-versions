@@ -8,7 +8,8 @@ using namespace std;
 void hello(){
     cout <<  "Привет! что будешь делать?" <<"\n";
     cout <<  "1. Мои проекты(В реализции)" << "\n";
-    cout <<  "2. Добавить проект(В реализции)" << "\n";
+    cout <<  "2. Добавить проект" << "\n";
+    cout <<  "3. Очистить список проектов" << "\n";
 }
 
 int main(){
@@ -17,15 +18,36 @@ int main(){
     int answer;
     hello();
     cin >> answer;
-    if (answer == 1){
-        databaseCheck();
-        //На доработку
+    //Выполнение действий
+    switch(answer){
+        case 1:
+            //Вызов проверки Projects.txt
+            databaseCheck();
+            main();
+            break;
+
+        case 2:
+            //Вызов записи
+            databaseWrite();
+            main();
+            break;
+
+        case 3:
+            //Обьявление переменной
+            int clearDatabasesure;
+            cout << "Вы уверены?" << "\n";
+            cout << "1. Да" << "\n";
+            cout << "2. Нет" << "\n";
+            cin  >> clearDatabasesure;
+            //Проверка ответа
+            if (clearDatabasesure == 1){
+                databaseClear();
+            }
+            else{
+                main();
+            }
     }
-    if (answer == 2){
-        databaseWrite();
-        main();
-        //На доработку
-    }
+
 }
 
-//Version A.1.0
+//Version A.1.2
