@@ -13,6 +13,7 @@ void hello(){
 }
 
 int main(){
+    while(true){
     //Инициализация переменных
     //и вывод списка действий
     int answer;
@@ -23,13 +24,11 @@ int main(){
         case 1:
             //Вызов проверки Projects.txt
             databaseCheck();
-            main();
             break;
 
         case 2:
             //Вызов записи
             databaseWrite();
-            main();
             break;
 
         case 3:
@@ -44,10 +43,13 @@ int main(){
                 databaseClear();
             }
             else{
-                main();
+                cout << "Некоректно";
             }
+            break;
+        default:
+            cout << "Некорректный номер действия";
     }
-
+}
 }
 
-//Version A.1.2
+//Version A.1.3

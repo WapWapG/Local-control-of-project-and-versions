@@ -10,10 +10,10 @@ string line;
 
 // Функция для считывания txt файла
 int databaseCheck(){
-    std::ifstream in("Projects.txt");
+    ifstream in("Projects.txt");
     if (in.is_open()){
-        while (std::getline(in, line)){
-            cout << line << endl;
+        while (getline(in, line)){
+            cout << line << "\n" << endl;
         }
     }
     in.close();
