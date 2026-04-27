@@ -14,7 +14,7 @@ English version from the bottom!
 g++ main.cpp -o lcop
 ```
 
-___________________________ENGLISH________________________________
+===========================ENGLISH===========================
 # Local-control-of-project-and-versions
 This is my second project, where I implement convenient local project management and its versions.
 
