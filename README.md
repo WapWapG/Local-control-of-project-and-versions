@@ -26,7 +26,7 @@ Bug detection, bug correction.
 
 # Notes if anyone wants to compile it themselves
 Compile main.cpp here is the command:
-``
+```
 g++ main.cpp -o lcop
-``
+```
 
